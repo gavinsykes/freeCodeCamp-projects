@@ -1,0 +1,73 @@
+html {
+  font-family: sans-serif;
+  padding: 0;
+}
+.author {
+  font-style: oblique;
+}
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main.night {
+  background-color: black;
+  color: white;
+}
+.buttons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.quote-box {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+}
+.night .quote-box {background-color: black;}
+.quote-wrapper {
+  width: 70%;
+  background: linear-gradient(to right,red,orange,yellow,green,blue,indigo,violet,red,orange,yellow,green,blue,indigo,violet,red,orange,yellow,green,blue,indigo,violet,red,orange,yellow,green,blue,indigo,violet,red,orange,yellow,green,blue,indigo,violet,red,orange,yellow,green,blue,indigo,violet,red,orange,yellow,green,blue,indigo,violet);
+  border-radius: 15px;
+  padding: 5px;
+  background-size: 700% 700%;
+  animation: background-rainbow-transition 60s linear infinite;
+}
+@keyframes background-rainbow-transition {
+  0% {background-position: 0% 0%}
+  100% {background-position: 100% 0%}
+}
+p.quote {
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}
+a.tweetbutton {
+  font-weight: bold;
+  color: white;
+  background-color: #1da1f3;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+}
+.night-button {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-top-left-radius: 1rem;
+}
+.night .night-button {
+  background-color: white;
+  color: black;
+}
