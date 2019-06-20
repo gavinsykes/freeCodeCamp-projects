@@ -1,2 +1,2 @@
-# freeCodeCamp-projects
-Solutions to the freeCodeCamp Projects
+# freeCodeCamp Projects
+## Solutions to the freeCodeCamp Projects
