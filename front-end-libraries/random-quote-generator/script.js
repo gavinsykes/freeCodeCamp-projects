@@ -36,7 +36,6 @@ class QuoteBox extends React.Component {
   }
   newQuote() {
     let qid = Math.floor(Math.random()*quotes.length);
-    console.log(qid);
     this.setState({
       quote  : quotes[qid].quote,
       author : quotes[qid].author
@@ -48,15 +47,15 @@ class QuoteBox extends React.Component {
   render() {
     return (
       <div className="quote-wrapper">
-      <div className="quote-box" id="quote-box">
-        <p className="quote" id="text">"{this.state.quote}"</p>
-        <p className="author" id="author"> - {this.state.author}</p>
-        <div class="buttons">
-          <button id="new-quote" onClick={this.newQuote}>New Quote</button>
-          <TweetQuote quote={this.state.quote} author={this.state.author}/>
+        <div className="quote-box" id="quote-box">
+          <p className="quote" id="text">"{this.state.quote}"</p>
+          <p className="author" id="author"> - {this.state.author}</p>
+          <div class="buttons">
+            <button id="new-quote" onClick={this.newQuote}>New Quote</button>
+            <TweetQuote quote={this.state.quote} author={this.state.author}/>
+          </div>
         </div>
-        </div>
-        </div>
+      </div>
     )
   }
 }
@@ -90,7 +89,6 @@ class App extends React.Component {
     }
   }
   toggleNight() {
-    console.log('Night toggled.');
     this.setState({night : !this.state.night});
   }
   render() {
