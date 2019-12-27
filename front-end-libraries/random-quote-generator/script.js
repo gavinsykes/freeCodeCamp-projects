@@ -21,7 +21,7 @@ const quotes = [
   }
 ];
 
-const NewQuote = () => <button id="new-quote">New Quote</button>;
+const NewQuote = props => <button onClick={props.onClick}>New Quote</button>;
 
 const TweetQuote = props => <a className="tweetbutton" id="tweet-quote" target="_blank" href={'https://www.twitter.com/intent/tweet?text=' + encodeURI(props.quote) + "%0A%0A%20-%20" + encodeURI(props.author)}><i class="fab fa-twitter"></i> Tweet Quote</a>
 
@@ -29,8 +29,8 @@ class QuoteBox extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      quote  : '',
-      author : ''
+      quote  : ``,
+      author : ``
     }
     this.newQuote = this.newQuote.bind(this);
   }
@@ -51,7 +51,7 @@ class QuoteBox extends React.Component {
           <p className="quote" id="text">"{this.state.quote}"</p>
           <p className="author" id="author"> - {this.state.author}</p>
           <div class="buttons">
-            <button id="new-quote" onClick={this.newQuote}>New Quote</button>
+            <NewQuote onClick={this.newQuote}/>
             <TweetQuote quote={this.state.quote} author={this.state.author}/>
           </div>
         </div>
@@ -94,8 +94,8 @@ class App extends React.Component {
   render() {
     return (
       <main className={this.state.night && 'night'}>
-      <QuoteBox />
-      <NightButton onClick={this.toggleNight} night={this.state.night}/>
+        <QuoteBox />
+        <NightButton onClick={this.toggleNight} night={this.state.night}/>
       </main>
     )
   }
