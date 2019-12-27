@@ -1,25 +1,25 @@
 const quotes = [
   {
-    quote : 'Don\'t believe everything you read on the internet.',
-    author : 'Abraham Lincoln'
+    quote  : `Don't believe everything you read on the internet.`,
+    author : `Abraham Lincoln`
   },
   {
-    quote : 'Never back the early kickoff.',
-    author : 'Albert Einstein'
+    quote  : `Never back the early kickoff.`,
+    author : `Albert Einstein`
   },
   {
-    quote: 'Do or do not, there is no try.',
-    author: 'Dumbledore'
+    quote  : `Do or do not, there is no try.`,
+    author : `Dumbledore`
   },
   {
-    quote : 'You shall not pass!',
-    author: 'Darth Vader'
+    quote  : `You shall not pass!`,
+    author : `Darth Vader`
   },
   {
-    quote : 'Luke, I am your father.',
-    author : 'Homer Simpson'
+    quote  : `Luke, I am your father.`,
+    author : `Homer Simpson`
   }
-]
+];
 
 const NewQuote = () => <button id="new-quote">New Quote</button>;
 
